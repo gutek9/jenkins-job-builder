@@ -7,6 +7,7 @@ WORKDIR /opt
 RUN apk update \
     && apk add py-setuptools py-pip python-dev libffi-dev openssl-dev git gcc py-configobj linux-headers musl-dev \
     # install python deps
+    && pip install --upgrade pip \
     && pip install PyYAML \
     && pip install six pbr \
     && pip install pyOpenSSL stevedore fasteners pyasn1 ndg-httpsclient ordereddict multi_key_dict sphinx sphinxcontrib-programoutput builders jenkins python-jenkins
